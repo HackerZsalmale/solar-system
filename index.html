@@ -189,7 +189,7 @@ function layout(){
  dpr=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;
  for(const c of [glc,sc]){c.width=W*dpr;c.height=H*dpr}
  const wide=W>760;
- CX=wide?W*.58:W*.5;CY=wide?H*.38:H*.37;
+ CX=W*.5;CY=wide?H*.38:H*.37;
  BR=wide?Math.min(H*.27,(W-260)*.34):Math.min(W*.37,H*.19);
  stars=Array.from({length:Math.round(W*H/5200)},()=>({x:Math.random()*W,y:Math.random()*H,r:Math.random()*1.1+.25,p:Math.random()*6.28,s:Math.random()*1.4+.4,d:Math.random()*.6+.2}));
  if(gl)gl.viewport(0,0,glc.width,glc.height);
